@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lmB-Uh-MCe">
+                                <rect key="frame" x="0.0" y="130" width="205" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="in feet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAP-wA-1sP">
+                                <rect key="frame" x="206" y="134" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cuX-KH-4Oq">
+                                <rect key="frame" x="0.0" y="199" width="320" height="29"/>
+                                <segments>
+                                    <segment title="inches"/>
+                                    <segment title="meters"/>
+                                    <segment title="miles"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6L-UW-b6G">
+                                <rect key="frame" x="135" y="235" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TZZ-cK-7hC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Click Update for the answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7N5-9i-ke0">
+                                <rect key="frame" x="0.0" y="273" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cAP-wA-1sP" firstAttribute="leading" secondItem="lmB-Uh-MCe" secondAttribute="trailing" constant="1" id="5ep-gY-ktY"/>
+                            <constraint firstItem="o6L-UW-b6G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6mf-SR-wMq"/>
+                            <constraint firstItem="cuX-KH-4Oq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9GW-xA-B2H"/>
+                            <constraint firstItem="7N5-9i-ke0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I57-eR-Uwl"/>
+                            <constraint firstItem="cuX-KH-4Oq" firstAttribute="top" secondItem="lmB-Uh-MCe" secondAttribute="bottom" constant="19" id="N9l-Pa-bfU"/>
+                            <constraint firstItem="cuX-KH-4Oq" firstAttribute="top" secondItem="cAP-wA-1sP" secondAttribute="bottom" constant="24" id="csp-NA-ivB"/>
+                            <constraint firstItem="7N5-9i-ke0" firstAttribute="top" secondItem="o6L-UW-b6G" secondAttribute="bottom" constant="8" id="g1X-Rb-UBb"/>
+                            <constraint firstItem="o6L-UW-b6G" firstAttribute="top" secondItem="cuX-KH-4Oq" secondAttribute="bottom" constant="18" id="zrK-Oz-uGB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="outputField" destination="7N5-9i-ke0" id="hmf-vm-dgL"/>
+                        <outlet property="segmentField" destination="cuX-KH-4Oq" id="2nn-iV-AoR"/>
+                        <outlet property="userInput" destination="lmB-Uh-MCe" id="6H0-62-b11"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="321"/>
+        </scene>
+    </scenes>
+</document>
