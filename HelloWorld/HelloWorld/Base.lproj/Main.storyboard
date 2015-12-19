@@ -17,15 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HM2-f4-XdD">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HM2-f4-XdD">
                                 <rect key="frame" x="118" y="268" width="71" height="30"/>
                                 <state key="normal" title="Click Here"/>
                                 <connections>
                                     <action selector="testButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d85-E2-tER"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Explanation Goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gq0-aZ-itC">
-                                <rect key="frame" x="74" y="182" width="172" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hello, everybody!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNc-AG-RVv">
+                                <rect key="frame" x="86" y="173" width="134" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,13 +33,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Gq0-aZ-itC" firstAttribute="leading" secondItem="HM2-f4-XdD" secondAttribute="trailing" constant="-115" id="AjP-tz-daf"/>
-                            <constraint firstItem="HM2-f4-XdD" firstAttribute="top" secondItem="Gq0-aZ-itC" secondAttribute="bottom" constant="66" id="PT7-A1-UXn"/>
-                            <constraint firstItem="Gq0-aZ-itC" firstAttribute="centerX" secondItem="HM2-f4-XdD" secondAttribute="centerX" id="yK9-Pk-eKV"/>
+                            <constraint firstItem="HM2-f4-XdD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XvU-kI-2Cj"/>
+                            <constraint firstItem="HM2-f4-XdD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hwt-cg-Jnu"/>
+                            <constraint firstItem="zNc-AG-RVv" firstAttribute="centerX" secondItem="HM2-f4-XdD" secondAttribute="centerX" id="xfa-x7-Vmn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="testLabel" destination="Gq0-aZ-itC" id="a3T-rx-Ep4"/>
+                        <outlet property="testLabel" destination="zNc-AG-RVv" id="R5K-wT-wdf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
